@@ -27,10 +27,13 @@ class RegisterRequest extends FormRequest
             'email' => 'required|email|unique:users,email|max:255',
             'password' => [
                 'required',
-                // 'string',
-                // Password::min(8)->mixedCase()->numbers()->symbols()->uncompromised(),
-                // 'confirmed',
-            ]
+                'string',
+                Password::min(8)->mixedCase()->numbers()->symbols()->uncompromised(),
+                'confirmed',
+            ],
+            'phone' => 'required|min:11',
+            'gender' => 'required',
+            'dateOfBirth' => 'required',
         ];
     }
 }
