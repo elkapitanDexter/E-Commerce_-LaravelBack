@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductsController;
 
-Route::get('/products', [ProductsController::class,'getProducts']);
+Route::get('/products/{offset}/{limit}', [ProductsController::class,'getProducts']);
 Route::get('/product/{id}', [ProductsController::class,'getProduct']);
 
 Route::post('/register', [AuthController::class, 'register']);
