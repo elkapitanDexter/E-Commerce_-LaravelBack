@@ -22,6 +22,9 @@ class AuthController extends Controller
             'phone' => $data['phone'],
             'gender' => $data['gender'],
             'dateOfBirth' => $data['dateOfBirth'],
+            'lightMode' => $data['lightMode'],
+            'dateAttempts' => $data['dateAttempts'],
+            'numberOfAttempts' => $data['numberOfAttempts'],
         ]);
 
         $token = $user->createToken('auth_token')->plainTextToken;

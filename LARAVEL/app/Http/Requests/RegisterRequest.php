@@ -34,6 +34,9 @@ class RegisterRequest extends FormRequest
             'phone' => 'required|min:11',
             'gender' => 'required',
             'dateOfBirth' => 'required',
+            'lightMode' => 'required',
+            'dateAttempts' => 'required',
+            'numberOfAttempts' => 'required',
         ];
     }
 }

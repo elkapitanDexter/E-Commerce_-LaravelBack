@@ -38,6 +38,9 @@ return new class extends Migration
             $table->string('imagePath')->nullable();
             $table->integer('blocked')->nullable();
             $table->integer('blockByAdminID')->nullable();
+            $table->integer('lightMode')->nullable(); // 0 - Light Mode, 1 - Dark Mode
+            $table->date('dateAttempts')->nullable();
+            $table->integer('numberOfAttempts')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

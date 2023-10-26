@@ -13,4 +13,7 @@ class SqlController extends Controller
             echo "Success: All users has been deleted!";
         }
     }
+    public function updateLightMode($userID, $mode){
+        User::where('id', $userID)->update(['lightMode' => $mode]);
+    }
 }
