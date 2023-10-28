@@ -17,12 +17,15 @@ return new class extends Migration
             $table->text('businessName');
             $table->text('businessBackground');
             $table->text('businessAddress');
-            $table->text('licenseNumber');
-            $table->text('licenseDateExpiry');
             $table->text('businessContactNo1');
             $table->text('businessContactNo2')->nullable();
+            $table->text('validIDname')->nullable();
+            $table->text('idNumber')->nullable();
+            $table->text('idDateExpiry')->nullable();
             $table->text('businessEmail')->nullable();
             $table->text('businessFBLink')->nullable();
+            $table->text('idImageName')->nullable();
+            $table->text('idImagePath')->nullable();
             $table->timestamps();
         });
     }

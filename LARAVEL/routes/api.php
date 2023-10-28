@@ -16,4 +16,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/user', [AuthController::class, 'user']);
+    Route::post('/submitBusinessBasic', [SqlController::class, 'submitBusinessBasic']);
+    Route::post('/submitIdentificationsLinks', [SqlController::class, 'submitIdentificationsL']);
+    Route::post('/submitBusMainImage', [SqlController::class, 'submitBusMainImg']);
 });
